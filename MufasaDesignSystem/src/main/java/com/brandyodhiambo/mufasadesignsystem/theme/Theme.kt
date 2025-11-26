@@ -6,6 +6,12 @@ import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
 import androidx.compose.runtime.Composable
+import com.brandyodhiambo.mufasadesignsystem.color.MufasaDefaults
+import com.brandyodhiambo.mufasadesignsystem.shape.DefaultMufasaShapes
+import com.brandyodhiambo.mufasadesignsystem.shape.MufasaShapes
+import com.brandyodhiambo.mufasadesignsystem.type.DefaultMufasaTypography
+import com.brandyodhiambo.mufasadesignsystem.type.MufasaTypography
+import com.brandyodhiambo.mufasadesignsystem.type.asMaterialTypography
 
 
 @Composable

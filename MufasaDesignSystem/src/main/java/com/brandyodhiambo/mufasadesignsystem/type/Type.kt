@@ -1,4 +1,4 @@
-package com.brandyodhiambo.mufasadesignsystem.theme
+package com.brandyodhiambo.mufasadesignsystem.type
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
