@@ -2,7 +2,7 @@ package com.brandyodhiambo.mufasadesignsystem.shape
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.unit.dp
-import com.brandyodhiambo.mufasadesignsystem.token.MufasaShapeToken
+import com.brandyodhiambo.mufasadesignsystem.theme.token.MufasaShapeToken
 
 data class MufasaShapes(
     val extarSmall: RoundedCornerShape = RoundedCornerShape(2.dp),

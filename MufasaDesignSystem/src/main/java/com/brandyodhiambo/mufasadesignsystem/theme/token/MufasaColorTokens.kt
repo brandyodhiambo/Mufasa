@@ -1,4 +1,4 @@
-package com.brandyodhiambo.mufasadesignsystem.token
+package com.brandyodhiambo.mufasadesignsystem.theme.token
 
 import androidx.compose.ui.graphics.Color
 
