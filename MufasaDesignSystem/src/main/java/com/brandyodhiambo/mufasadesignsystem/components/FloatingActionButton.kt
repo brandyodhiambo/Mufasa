@@ -98,32 +98,4 @@ fun MufasaFab(
 }
 
 
-/*
-Usage
-// Regular FAB with icon
-MufasaFab(
-    onClick = { /* action */ }
-) {
-    Icon(Icons.Default.Add, contentDescription = "Add")
-}
 
-// Small FAB
-MufasaFab(
-    onClick = { /* */ },
-    variant = MufasaFabVariant.Small
-) {
-    Icon(Icons.Default.Edit, contentDescription = "Edit")
-}
-
-// Extended FAB with text + icon
-val interaction = remember { MutableInteractionSource() }
-val isPressed by interaction.collectIsPressedAsState()
-
-MufasaFab(
-    variant = MufasaFabVariant.Extended,
-    extendedIcon = { Icon(Icons.Default.Add, null) },
-    extendedText = { Text("New") },
-    expanded = !isPressed,
-    interactionSource = interaction,
-    onClick = {}
-)*/

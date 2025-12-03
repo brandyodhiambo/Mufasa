@@ -66,27 +66,3 @@ fun MufasaButton(
 }
 
 
-
-
-
-/*
-Button usage:
-*MufasaButton(
-    onClick = {},
-    text = "Continue",
-    colors = MufasaButtonDefaults.primaryColors()
-)
-
-MufasaButton(
-    onClick = {},
-    text = "Retry",
-    colors = MufasaButtonDefaults.outlineColors()
-)
-
-MufasaButton(
-    onClick = {},
-    text = "Cancel",
-    colors = MufasaButtonDefaults.secondaryColors()
-)
-* */
-

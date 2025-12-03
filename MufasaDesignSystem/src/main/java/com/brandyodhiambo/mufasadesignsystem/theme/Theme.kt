@@ -45,38 +45,6 @@ fun MufasaAppTheme(
     )
 }
 
-/*
-* Theme Usage:
-*
-* val myBrandColors = MufasaDefaults.LightColorScheme.copy(
-    primary = Color(0xFF00BCD4),
-    onPrimary = Color.White
-)
-*
-* val typography = MufasaTypography(
-        displayLarge = TextStyle(...),
-    )
-
-MufasaAppTheme(
-    theme = Theme.Light,
-    lightColors = myBrandColors,
-    shapes = MufasaShapes(
-        small = RoundedCornerShape(2.dp),
-        medium = RoundedCornerShape(12.dp),
-        large = RoundedCornerShape(24.dp)
-    ),
-    typography = typography
-    * {
-        AppScreen()
-    }
-*
-*
-
-*
-*
-* */
-
-
 enum class Theme {
     Light,
     Dark,
