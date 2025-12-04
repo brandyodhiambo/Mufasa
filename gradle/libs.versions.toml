@@ -11,6 +11,8 @@ composeBom = "2024.09.00"
 appcompat = "1.7.1"
 material = "1.13.0"
 coil = "2.7.0"
+spotless="8.1.0"
+ktlint = "14.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,4 +38,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless"}
+ktlint = {id = "org.jlleitschuh.gradle.ktlint",version.ref = "ktlint"}
 

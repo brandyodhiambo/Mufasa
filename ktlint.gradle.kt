@@ -1,0 +1,11 @@
+ktlint {
+    debug.set(true)
+    verbose.set(true)
+    android.set(false)
+    outputToConsole.set(true)
+    outputColorName.set("RED")
+    filter {
+        exclude("**/generated/**")
+        include("**/kotlin/**")
+    }
+}

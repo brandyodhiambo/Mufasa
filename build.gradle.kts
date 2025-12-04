@@ -5,3 +5,9 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.android.library) apply false
 }
+subprojects {
+    afterEvaluate {
+        project.apply("$rootDir/spotless.gradle.kt")
+        project.apply("$rootDir/ktlint.gradle.kt")
+    }
+}
