@@ -21,7 +21,6 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 import com.brandyodhiambo.mufasadesignsystem.theme.token.MufasaColorTokens
 
-
 val MufasaLightColorScheme = lightColorScheme(
     primary = MufasaColorTokens.PrimaryColor,
     onPrimary = MufasaColorTokens.PrimaryTextColor,

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.brandyodhiambo.mufasa.Demo
+package com.brandyodhiambo.mufasa.demo
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
@@ -33,32 +33,32 @@ import com.brandyodhiambo.mufasadesignsystem.components.MufasaFabVariant
 fun FabDemo(modifier: Modifier = Modifier) {
 
 // Regular FAB with icon
-MufasaFab(
-    onClick = {   }
-) {
-    Icon(Icons.Default.Add, contentDescription = "Add")
-}
+    MufasaFab(
+        onClick = { }
+    ) {
+        Icon(Icons.Default.Add, contentDescription = "Add")
+    }
 
 // Small FAB
-MufasaFab(
-    onClick = {   },
-    variant = MufasaFabVariant.Small
-) {
-    Icon(Icons.Default.Edit, contentDescription = "Edit")
-}
+    MufasaFab(
+        onClick = { },
+        variant = MufasaFabVariant.Small
+    ) {
+        Icon(Icons.Default.Edit, contentDescription = "Edit")
+    }
 
 // Extended FAB with text + icon
-val interaction = remember { MutableInteractionSource() }
-val isPressed by interaction.collectIsPressedAsState()
+    val interaction = remember { MutableInteractionSource() }
+    val isPressed by interaction.collectIsPressedAsState()
 
-MufasaFab(
-    variant = MufasaFabVariant.Extended,
-    extendedIcon = { Icon(Icons.Default.Add, null) },
-    extendedText = { Text("New") },
-    expanded = !isPressed,
-    interactionSource = interaction,
-    onClick = {},
-    content = {}
-)
+    MufasaFab(
+        variant = MufasaFabVariant.Extended,
+        extendedIcon = { Icon(Icons.Default.Add, null) },
+        extendedText = { Text("New") },
+        expanded = !isPressed,
+        interactionSource = interaction,
+        onClick = {},
+        content = {},
+    )
 
 }

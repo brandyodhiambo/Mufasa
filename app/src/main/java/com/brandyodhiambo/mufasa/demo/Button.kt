@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.brandyodhiambo.mufasa.Demo
+package com.brandyodhiambo.mufasa.demo
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -25,18 +25,18 @@ fun ButtonUsage(modifier: Modifier = Modifier) {
     MufasaButton(
         onClick = {},
         text = "Continue",
-        colors = MufasaButtonDefaults.primaryColors()
+        colors = MufasaButtonDefaults.primaryColors(),
     )
 
     MufasaButton(
         onClick = {},
         text = "Retry",
-        colors = MufasaButtonDefaults.outlineColors()
+        colors = MufasaButtonDefaults.outlineColors(),
     )
 
     MufasaButton(
         onClick = {},
         text = "Cancel",
-        colors = MufasaButtonDefaults.secondaryColors()
+        colors = MufasaButtonDefaults.secondaryColors(),
     )
 }
