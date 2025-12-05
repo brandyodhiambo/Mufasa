@@ -4,28 +4,28 @@ spotless {
         googleJavaFormat().aosp()
         removeUnusedImports()
         trimTrailingWhitespace()
-        indentWithSpaces()
+        leadingTabsToSpaces()
         licenseHeaderFile(rootProject.file("spotless/LICENSE.txt"))
         endWithNewline()
     }
     kotlin {
         target "**/*.kt"
         trimTrailingWhitespace()
-        //ktlint()
-        indentWithSpaces()
+        ktlint()
+        leadingTabsToSpaces()
         licenseHeaderFile(rootProject.file("spotless/LICENSE.txt"))
         endWithNewline()
     }
 
     format 'misc', {
         target '**/*.gradle', '**/*.md', '**/.gitignore'
-        indentWithSpaces()
+        leadingTabsToSpaces()
         trimTrailingWhitespace()
         endWithNewline()
     }
     format 'xml', {
         target '**/*.xml'
-        indentWithSpaces()
+        leadingTabsToSpaces()
         trimTrailingWhitespace()
         endWithNewline()
     }
