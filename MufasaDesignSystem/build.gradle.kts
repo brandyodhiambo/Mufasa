@@ -65,7 +65,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.brandyodhiambo"
                 artifactId = "mufasa-design-system"
-                version = System.getenv("VERSION_NAME") ?: "0.0.0-local"
+                version = "1.0.0"
             }
         }
     }
