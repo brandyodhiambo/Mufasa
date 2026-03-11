@@ -37,32 +37,35 @@ fun MufasaAlert(
     onDismiss: (() -> Unit)? = null,
     confirmButtonColors: ButtonColors = MufasaButtonDefaults.primaryColors(),
     dismissButtonColors: ButtonColors = MufasaButtonDefaults.outlineColors(),
-    shape: Shape = MaterialTheme.shapes.medium
+    shape: Shape = MaterialTheme.shapes.medium,
 ) {
     AlertDialog(
         modifier = modifier,
         onDismissRequest = onDismissRequest,
         icon = icon,
-        title = title?.let {
-            { Text(it, style = MaterialTheme.typography.titleLarge) }
-        },
-        text = message?.let {
-            { Text(it, style = MaterialTheme.typography.bodyMedium) }
-        },
+        title =
+            title?.let {
+                { Text(it, style = MaterialTheme.typography.titleLarge) }
+            },
+        text =
+            message?.let {
+                { Text(it, style = MaterialTheme.typography.bodyMedium) }
+            },
         confirmButton = {
             MufasaButton(
                 onClick = onConfirm,
-                colors = confirmButtonColors
+                colors = confirmButtonColors,
             ) { Text(confirmText) }
         },
-        dismissButton = dismissText?.let {
-            {
-                MufasaButton(
-                    onClick = { onDismiss?.invoke() },
-                    colors = dismissButtonColors
-                ) { Text(it) }
-            }
-        },
-        shape = shape
+        dismissButton =
+            dismissText?.let {
+                {
+                    MufasaButton(
+                        onClick = { onDismiss?.invoke() },
+                        colors = dismissButtonColors,
+                    ) { Text(it) }
+                }
+            },
+        shape = shape,
     )
 }

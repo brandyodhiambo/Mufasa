@@ -35,22 +35,23 @@ fun MufasaListTile(
     title: @Composable () -> Unit,
     subtitle: @Composable (() -> Unit)? = null,
     trailing: @Composable (() -> Unit)? = null,
-    onClick: (() -> Unit)? = null
+    onClick: (() -> Unit)? = null,
 ) {
-    val clickableModifier = if (onClick != null) {
-        modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(16.dp)
-    } else {
-        modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    }
+    val clickableModifier =
+        if (onClick != null) {
+            modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(16.dp)
+        } else {
+            modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+        }
 
     Row(
         modifier = clickableModifier,
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         if (leading != null) {
             leading()
@@ -58,7 +59,7 @@ fun MufasaListTile(
         }
 
         Column(
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.weight(1f),
         ) {
             title()
             if (subtitle != null) {

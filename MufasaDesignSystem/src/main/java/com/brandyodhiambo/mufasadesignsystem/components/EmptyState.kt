@@ -47,17 +47,19 @@ fun MufasaEmptyStateComponent(
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = message,
-            style = MaterialTheme.typography.titleMedium.copy(
-                textAlign = TextAlign.Center,
-            ),
+            style =
+                MaterialTheme.typography.titleMedium.copy(
+                    textAlign = TextAlign.Center,
+                ),
         )
         if (subMessage != null) {
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = subMessage,
-                style = MaterialTheme.typography.bodySmall.copy(
-                    textAlign = TextAlign.Center,
-                ),
+                style =
+                    MaterialTheme.typography.bodySmall.copy(
+                        textAlign = TextAlign.Center,
+                    ),
             )
         }
     }

@@ -21,7 +21,7 @@ import com.brandyodhiambo.mufasadesignsystem.components.MufasaButton
 import com.brandyodhiambo.mufasadesignsystem.theme.MufasaButtonDefaults
 
 @Composable
-fun ButtonUsage(modifier: Modifier = Modifier) {
+fun buttonUsage(modifier: Modifier = Modifier) {
     MufasaButton(
         onClick = {},
         text = "Continue",

@@ -15,7 +15,6 @@
  */
 package com.brandyodhiambo.mufasadesignsystem.components
 
-
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Column
@@ -55,15 +54,17 @@ fun <T> MufasaDropdown(
     shape: CornerBasedShape = MaterialTheme.shapes.small,
     placeholder: @Composable (() -> Unit)? = null,
     leadingIcon: @Composable (() -> Unit)? = null,
-    textStyle: TextStyle = LocalTextStyle. current,
-    colors: TextFieldColors = TextFieldDefaults.colors(
-        unfocusedIndicatorColor = MaterialTheme.colorScheme.onBackground.copy(
-            alpha = 0.5f,
+    textStyle: TextStyle = LocalTextStyle.current,
+    colors: TextFieldColors =
+        TextFieldDefaults.colors(
+            unfocusedIndicatorColor =
+                MaterialTheme.colorScheme.onBackground.copy(
+                    alpha = 0.5f,
+                ),
+            focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+            unfocusedContainerColor = MaterialTheme.colorScheme.background,
+            focusedContainerColor = MaterialTheme.colorScheme.background,
         ),
-        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
-        unfocusedContainerColor = MaterialTheme.colorScheme.background,
-        focusedContainerColor = MaterialTheme.colorScheme.background,
-    ),
     onOptionSelected: (T) -> Unit,
     options: List<T>,
     selectedOption: T,
@@ -78,9 +79,10 @@ fun <T> MufasaDropdown(
             Spacer(modifier = Modifier.height(4.dp))
         }
         ExposedDropdownMenuBox(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(56.dp),
+            modifier =
+                modifier
+                    .fillMaxWidth()
+                    .height(56.dp),
             expanded = expanded,
             onExpandedChange = {
                 if (enabled) {
@@ -89,9 +91,10 @@ fun <T> MufasaDropdown(
             },
         ) {
             OutlinedTextField(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .menuAnchor(),
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .menuAnchor(),
                 readOnly = true,
                 value = selectedOption.toString(),
                 onValueChange = {},
@@ -109,16 +112,17 @@ fun <T> MufasaDropdown(
                     }
                 },
                 colors = colors,
-                interactionSource = remember { MutableInteractionSource() }
-                    .also { interactionSource ->
-                        LaunchedEffect(interactionSource) {
-                            interactionSource.interactions.collect {
-                                if (it is PressInteraction.Release) {
-                                    onClick()
+                interactionSource =
+                    remember { MutableInteractionSource() }
+                        .also { interactionSource ->
+                            LaunchedEffect(interactionSource) {
+                                interactionSource.interactions.collect {
+                                    if (it is PressInteraction.Release) {
+                                        onClick()
+                                    }
                                 }
                             }
-                        }
-                    },
+                        },
             )
             ExposedDropdownMenu(
                 expanded = expanded,
@@ -129,10 +133,11 @@ fun <T> MufasaDropdown(
                         text = {
                             Text(
                                 text = selectionOption.toString(),
-                                style = MaterialTheme.typography.labelMedium.copy(
-                                    fontSize = 16.sp,
-                                    fontWeight = FontWeight.SemiBold
-                                ),
+                                style =
+                                    MaterialTheme.typography.labelMedium.copy(
+                                        fontSize = 16.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                    ),
                             )
                         },
                         onClick = {

@@ -30,11 +30,10 @@ import com.brandyodhiambo.mufasadesignsystem.components.MufasaFab
 import com.brandyodhiambo.mufasadesignsystem.components.MufasaFabVariant
 
 @Composable
-fun FabDemo(modifier: Modifier = Modifier) {
-
+fun fabDemo(modifier: Modifier = Modifier) {
 // Regular FAB with icon
     MufasaFab(
-        onClick = { }
+        onClick = { },
     ) {
         Icon(Icons.Default.Add, contentDescription = "Add")
     }
@@ -42,7 +41,7 @@ fun FabDemo(modifier: Modifier = Modifier) {
 // Small FAB
     MufasaFab(
         onClick = { },
-        variant = MufasaFabVariant.Small
+        variant = MufasaFabVariant.Small,
     ) {
         Icon(Icons.Default.Edit, contentDescription = "Edit")
     }
@@ -60,5 +59,4 @@ fun FabDemo(modifier: Modifier = Modifier) {
         onClick = {},
         content = {},
     )
-
 }

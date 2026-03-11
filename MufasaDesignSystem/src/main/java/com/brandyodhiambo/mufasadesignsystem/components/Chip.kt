@@ -44,25 +44,26 @@ fun MufasaChip(
     unselectedContainerColor: Color = MaterialTheme.colorScheme.surfaceVariant,
     unselectedLabelColor: Color = MaterialTheme.colorScheme.onSurfaceVariant,
     border: BorderStroke? = null,
-    leadingIcon: (@Composable () -> Unit)? = null
+    leadingIcon: (@Composable () -> Unit)? = null,
 ) {
     Surface(
-        modifier = modifier
-            .clip(shape)
-            .clickable(enabled = enabled, onClick = onClick),
+        modifier =
+            modifier
+                .clip(shape)
+                .clickable(enabled = enabled, onClick = onClick),
         color = if (selected) selectedContainerColor else unselectedContainerColor,
         border = border,
-        shape = shape
+        shape = shape,
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             leadingIcon?.invoke()
             Text(
                 text = label,
                 color = if (selected) selectedLabelColor else unselectedLabelColor,
-                style = MaterialTheme.typography.labelMedium
+                style = MaterialTheme.typography.labelMedium,
             )
         }
     }

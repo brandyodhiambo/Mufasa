@@ -41,16 +41,18 @@ fun ContentWithCircularIndicator(
     color: Color = MaterialTheme.colorScheme.onPrimary,
 ) {
     Row(
-        modifier = modifier
-            .padding(8.dp)
-            .fillMaxWidth(),
+        modifier =
+            modifier
+                .padding(8.dp)
+                .fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
         if (isLoading) {
             CircularProgressIndicator(
-                modifier = Modifier
-                    .size(24.dp),
+                modifier =
+                    Modifier
+                        .size(24.dp),
                 color = color,
             )
             Spacer(modifier = Modifier.size(8.dp))
@@ -59,10 +61,11 @@ fun ContentWithCircularIndicator(
             modifier = Modifier,
             text = if (isLoading) titleWhenLoading else titleWhenNotLoading,
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.labelLarge.copy(
-                fontWeight = FontWeight.Bold,
-                color = color,
-            ),
+            style =
+                MaterialTheme.typography.labelLarge.copy(
+                    fontWeight = FontWeight.Bold,
+                    color = color,
+                ),
         )
     }
 }

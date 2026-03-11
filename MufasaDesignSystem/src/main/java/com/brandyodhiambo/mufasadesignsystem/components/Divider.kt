@@ -15,7 +15,6 @@
  */
 package com.brandyodhiambo.mufasadesignsystem.components
 
-import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.VerticalDivider
@@ -30,9 +29,9 @@ fun MufasaDivider(
     modifier: Modifier = Modifier,
     thickness: Dp = 1.dp,
     color: Color = MaterialTheme.colorScheme.outlineVariant,
-    isVertical:Boolean = false
+    isVertical: Boolean = false,
 ) {
-    if (isVertical){
+    if (isVertical) {
         VerticalDivider(modifier = modifier, thickness = thickness, color = color)
     } else {
         HorizontalDivider(modifier = modifier, thickness = thickness, color = color)

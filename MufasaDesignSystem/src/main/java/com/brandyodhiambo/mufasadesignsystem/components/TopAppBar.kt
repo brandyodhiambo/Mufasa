@@ -43,32 +43,34 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MufasaTopAppBar(
-    backgroundImage:Int? = null,
+    backgroundImage: Int? = null,
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     subtitle: (@Composable () -> Unit)? = null,
     onNavigateUp: (() -> Unit)? = null,
     actions: (@Composable RowScope.() -> Unit)? = null,
-    colors: TopAppBarColors = TopAppBarDefaults.topAppBarColors(
-        containerColor = Color.Transparent.copy(alpha = 0.6f),
-        titleContentColor = MaterialTheme.colorScheme.onPrimary,
-        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-        actionIconContentColor = MaterialTheme.colorScheme.onPrimary
-
-    ),
+    colors: TopAppBarColors =
+        TopAppBarDefaults.topAppBarColors(
+            containerColor = Color.Transparent.copy(alpha = 0.6f),
+            titleContentColor = MaterialTheme.colorScheme.onPrimary,
+            navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
+            actionIconContentColor = MaterialTheme.colorScheme.onPrimary,
+        ),
 ) {
     Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(50.dp)
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .height(50.dp),
     ) {
-        if (backgroundImage != null){
+        if (backgroundImage != null) {
             Image(
                 painter = painterResource(id = backgroundImage),
                 contentDescription = "TopAppbarImage",
-                modifier = Modifier
-                    .fillMaxSize(),
-                contentScale = ContentScale.Crop
+                modifier =
+                    Modifier
+                        .fillMaxSize(),
+                contentScale = ContentScale.Crop,
             )
         }
 
@@ -98,37 +100,38 @@ fun MufasaTopAppBar(
             colors = colors,
         )
     }
-
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MufasaCenteredTopAppBar(
     modifier: Modifier = Modifier,
-    backgroundImage:Int? = null,
+    backgroundImage: Int? = null,
     title: @Composable () -> Unit,
     actions: @Composable RowScope.() -> Unit = {},
     navigationIcon: @Composable () -> Unit = {},
-    colors: TopAppBarColors = TopAppBarDefaults.topAppBarColors(
-        containerColor = Color.Transparent.copy(alpha = 0.6f),
-        titleContentColor = MaterialTheme.colorScheme.onPrimary,
-        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-        actionIconContentColor = MaterialTheme.colorScheme.onPrimary
-    ),
+    colors: TopAppBarColors =
+        TopAppBarDefaults.topAppBarColors(
+            containerColor = Color.Transparent.copy(alpha = 0.6f),
+            titleContentColor = MaterialTheme.colorScheme.onPrimary,
+            navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
+            actionIconContentColor = MaterialTheme.colorScheme.onPrimary,
+        ),
 ) {
     Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(50.dp)
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .height(50.dp),
     ) {
-
-        if(backgroundImage != null){
+        if (backgroundImage != null) {
             Image(
                 painter = painterResource(id = backgroundImage),
                 contentDescription = "TopAppbarImage",
-                modifier = Modifier
-                    .fillMaxSize(),
-                contentScale = ContentScale.Crop
+                modifier =
+                    Modifier
+                        .fillMaxSize(),
+                contentScale = ContentScale.Crop,
             )
         }
 

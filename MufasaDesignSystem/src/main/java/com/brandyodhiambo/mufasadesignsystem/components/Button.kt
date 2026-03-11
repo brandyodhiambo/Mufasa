@@ -15,7 +15,6 @@
  */
 package com.brandyodhiambo.mufasadesignsystem.components
 
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -52,10 +51,11 @@ fun MufasaButton(
         enabled = enabled,
         shape = shape,
         colors = colors,
-        modifier = modifier
-            .fillMaxWidth()
-            .height(56.dp),
-        contentPadding = contentPadding
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .height(56.dp),
+        contentPadding = contentPadding,
     ) {
         if (content != null) {
             content()
@@ -63,7 +63,7 @@ fun MufasaButton(
         }
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
+            horizontalArrangement = Arrangement.Center,
         ) {
             if (leadingIcon != null) {
                 leadingIcon()

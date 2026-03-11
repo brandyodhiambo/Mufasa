@@ -27,12 +27,12 @@ fun MufasaSurface(
     modifier: Modifier = Modifier,
     shape: Shape = MaterialTheme.shapes.medium,
     color: Color = MaterialTheme.colorScheme.surface,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     Surface(
         modifier = modifier,
         color = color,
-        shape = shape
+        shape = shape,
     ) {
         content()
     }

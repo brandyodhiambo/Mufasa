@@ -15,15 +15,14 @@
  */
 package com.brandyodhiambo.mufasadesignsystem.components
 
-
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.LargeFloatingActionButton
-import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -37,7 +36,7 @@ enum class MufasaFabVariant {
     Regular,
     Small,
     Large,
-    Extended
+    Extended,
 }
 
 @Composable
@@ -52,7 +51,7 @@ fun MufasaFab(
     extendedIcon: @Composable (() -> Unit)? = null,
     expanded: Boolean = true,
     interactionSource: MutableInteractionSource? = remember { MutableInteractionSource() },
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     when (variant) {
         MufasaFabVariant.Regular -> {
@@ -67,6 +66,7 @@ fun MufasaFab(
                 content()
             }
         }
+
         MufasaFabVariant.Small -> {
             SmallFloatingActionButton(
                 onClick = onClick,
@@ -79,6 +79,7 @@ fun MufasaFab(
                 content()
             }
         }
+
         MufasaFabVariant.Large -> {
             LargeFloatingActionButton(
                 onClick = onClick,
@@ -91,6 +92,7 @@ fun MufasaFab(
                 content()
             }
         }
+
         MufasaFabVariant.Extended -> {
             if (extendedIcon != null) {
                 if (extendedText != null) {
@@ -104,7 +106,7 @@ fun MufasaFab(
                         icon = extendedIcon,
                         text = extendedText,
                         expanded = expanded,
-                        interactionSource = interactionSource  ,
+                        interactionSource = interactionSource,
                     )
                 }
             }

@@ -27,13 +27,13 @@ fun MufasaRadioButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    colors: RadioButtonColors = RadioButtonDefaults.colors()
+    colors: RadioButtonColors = RadioButtonDefaults.colors(),
 ) {
     RadioButton(
         selected = selected,
         onClick = onClick,
         enabled = enabled,
         modifier = modifier,
-        colors = colors
+        colors = colors,
     )
 }

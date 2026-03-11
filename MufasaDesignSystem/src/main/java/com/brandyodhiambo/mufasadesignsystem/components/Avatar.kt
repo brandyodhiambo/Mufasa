@@ -37,7 +37,7 @@ fun MufasaAvatar(
     imageUrl: String? = null,
     initials: String? = null,
     backgroundColor: Color = MaterialTheme.colorScheme.primary,
-    contentColor: Color = MaterialTheme.colorScheme.onPrimary
+    contentColor: Color = MaterialTheme.colorScheme.onPrimary,
 ) {
     val shape = CircleShape
 
@@ -45,22 +45,24 @@ fun MufasaAvatar(
         AsyncImage(
             model = imageUrl,
             contentDescription = null,
-            modifier = modifier
-                .size(size)
-                .clip(shape)
+            modifier =
+                modifier
+                    .size(size)
+                    .clip(shape),
         )
     } else {
         Box(
-            modifier = modifier
-                .size(size)
-                .clip(shape)
-                .background(backgroundColor),
-            contentAlignment = Alignment.Center
+            modifier =
+                modifier
+                    .size(size)
+                    .clip(shape)
+                    .background(backgroundColor),
+            contentAlignment = Alignment.Center,
         ) {
             Text(
                 text = initials ?: "?",
                 style = MaterialTheme.typography.titleMedium,
-                color = contentColor
+                color = contentColor,
             )
         }
     }

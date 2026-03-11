@@ -37,7 +37,7 @@ fun MufasaBottomBar(
     NavigationBar(
         modifier = modifier,
         containerColor = containerColor,
-        contentColor = contentColor
+        contentColor = contentColor,
     ) {
         items.forEachIndexed { index, item ->
             NavigationBarItem(
@@ -45,7 +45,7 @@ fun MufasaBottomBar(
                 onClick = { onItemSelected(index) },
                 icon = { Icon(item.icon, contentDescription = item.label) },
                 label = item.label?.let { { Text(it) } },
-                alwaysShowLabel = item.alwaysShowLabel
+                alwaysShowLabel = item.alwaysShowLabel,
             )
         }
     }

@@ -27,13 +27,13 @@ fun MufasaSwitch(
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    colors: SwitchColors = SwitchDefaults.colors()
+    colors: SwitchColors = SwitchDefaults.colors(),
 ) {
     Switch(
         checked = checked,
         onCheckedChange = onCheckedChange,
         enabled = enabled,
         modifier = modifier,
-        colors = colors
+        colors = colors,
     )
 }

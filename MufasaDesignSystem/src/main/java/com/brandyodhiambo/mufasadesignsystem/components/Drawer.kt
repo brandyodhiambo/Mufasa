@@ -46,11 +46,11 @@ fun MufasaModalDrawer(
                         label = { Text(item.label) },
                         icon = { Icon(item.icon, contentDescription = item.label) },
                         selected = false,
-                        onClick = item.onClick
+                        onClick = item.onClick,
                     )
                 }
             }
-        }
+        },
     ) {
         content()
     }
@@ -65,33 +65,25 @@ fun MufasaPermanentDrawer(
     PermanentNavigationDrawer(
         drawerContent = {
             PermanentDrawerSheet(
-                drawerContainerColor = drawerContainerColor
+                drawerContainerColor = drawerContainerColor,
             ) {
                 items.forEach { item ->
                     NavigationDrawerItem(
                         label = { Text(item.label) },
                         icon = { Icon(item.icon, contentDescription = item.label) },
                         selected = false,
-                        onClick = item.onClick
+                        onClick = item.onClick,
                     )
                 }
             }
-        }
+        },
     ) {
         content()
     }
 }
 
-
-
-
-
-
-
-
-
 data class MufasaDrawerItem(
     val label: String,
     val icon: ImageVector,
-    val onClick: () -> Unit
+    val onClick: () -> Unit,
 )

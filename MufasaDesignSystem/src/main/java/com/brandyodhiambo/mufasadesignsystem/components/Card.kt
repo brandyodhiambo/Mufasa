@@ -33,7 +33,7 @@ fun MufasaCard(
     colors: Color = MaterialTheme.colorScheme.surface,
     elevation: Dp = 1.dp,
     onClick: (() -> Unit)? = null,
-    content: @Composable ColumnScope.() -> Unit
+    content: @Composable ColumnScope.() -> Unit,
 ) {
     if (onClick != null) {
         Card(
@@ -42,7 +42,7 @@ fun MufasaCard(
             shape = shape,
             colors = CardDefaults.cardColors(colors),
             elevation = CardDefaults.cardElevation(defaultElevation = elevation),
-            content = content
+            content = content,
         )
     } else {
         Card(
@@ -50,7 +50,7 @@ fun MufasaCard(
             shape = shape,
             colors = CardDefaults.cardColors(colors),
             elevation = CardDefaults.cardElevation(defaultElevation = elevation),
-            content = content
+            content = content,
         )
     }
 }

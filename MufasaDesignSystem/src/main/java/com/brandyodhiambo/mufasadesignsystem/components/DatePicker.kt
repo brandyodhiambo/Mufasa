@@ -35,17 +35,19 @@ fun MufasaDatePicker(
     openDateDialog: (Boolean) -> Unit,
     setDate: (Long) -> Unit,
 ) {
-    val datePickerState = rememberDatePickerState(
-        initialSelectedDateMillis = null,
-        initialDisplayMode = DisplayMode.Picker,
-    )
+    val datePickerState =
+        rememberDatePickerState(
+            initialSelectedDateMillis = null,
+            initialDisplayMode = DisplayMode.Picker,
+        )
 
     val confirmEnabled = derivedStateOf { datePickerState.selectedDateMillis != null }
 
     DatePickerDialog(
-        colors = DatePickerDefaults.colors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-        ),
+        colors =
+            DatePickerDefaults.colors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            ),
         onDismissRequest = {
             openDateDialog(false)
         },
@@ -61,11 +63,12 @@ fun MufasaDatePicker(
             ) {
                 Text(
                     text = "Okay",
-                    color = if (confirmEnabled.value) {
-                        MaterialTheme.colorScheme.primary
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
+                    color =
+                        if (confirmEnabled.value) {
+                            MaterialTheme.colorScheme.primary
+                        } else {
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        },
                 )
             }
         },

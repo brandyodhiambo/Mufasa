@@ -37,47 +37,50 @@ import androidx.compose.ui.unit.dp
 fun MufasaCircularLoader(
     modifier: Modifier = Modifier,
     color: Color = MaterialTheme.colorScheme.primary,
-    strokeWidth: Dp = 4.dp
+    strokeWidth: Dp = 4.dp,
 ) {
     CircularProgressIndicator(
         modifier = modifier,
         color = color,
-        strokeWidth = strokeWidth
+        strokeWidth = strokeWidth,
     )
 }
 
 @Composable
 fun MufasaLinearLoader(
     modifier: Modifier = Modifier,
-    color: Color = MaterialTheme.colorScheme.primary
+    color: Color = MaterialTheme.colorScheme.primary,
 ) {
     LinearProgressIndicator(
         modifier = modifier.fillMaxWidth(),
-        color = color
+        color = color,
     )
 }
 
 @Composable
 fun MufasaSkeleton(
     modifier: Modifier = Modifier,
-    shape: Shape = MaterialTheme.shapes.small
+    shape: Shape = MaterialTheme.shapes.small,
 ) {
     val shimmer = rememberInfiniteTransition(label = "")
-    val alpha = shimmer.animateFloat(
-        initialValue = 0.3f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 1000),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = ""
-    )
+    val alpha =
+        shimmer.animateFloat(
+            initialValue = 0.3f,
+            targetValue = 1f,
+            animationSpec =
+                infiniteRepeatable(
+                    animation = tween(durationMillis = 1000),
+                    repeatMode = RepeatMode.Reverse,
+                ),
+            label = "",
+        )
 
     Box(
-        modifier = modifier
-            .background(
-                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = alpha.value),
-                shape = shape
-            )
+        modifier =
+            modifier
+                .background(
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = alpha.value),
+                    shape = shape,
+                ),
     )
 }

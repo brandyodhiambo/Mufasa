@@ -32,18 +32,19 @@ fun MufasaBadge(
     modifier: Modifier = Modifier,
     text: String,
     containerColor: Color = MaterialTheme.colorScheme.primary,
-    contentColor: Color = MaterialTheme.colorScheme.onPrimary
+    contentColor: Color = MaterialTheme.colorScheme.onPrimary,
 ) {
     Box(
-        modifier = modifier
-            .background(containerColor, shape = CircleShape)
-            .padding(horizontal = 8.dp, vertical = 4.dp),
-        contentAlignment = Alignment.Center
+        modifier =
+            modifier
+                .background(containerColor, shape = CircleShape)
+                .padding(horizontal = 8.dp, vertical = 4.dp),
+        contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
             color = contentColor,
-            style = MaterialTheme.typography.labelSmall
+            style = MaterialTheme.typography.labelSmall,
         )
     }
 }

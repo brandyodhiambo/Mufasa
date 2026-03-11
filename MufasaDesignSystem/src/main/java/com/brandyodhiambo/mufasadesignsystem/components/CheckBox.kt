@@ -27,13 +27,13 @@ fun MufasaCheckbox(
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    colors: CheckboxColors = CheckboxDefaults.colors()
+    colors: CheckboxColors = CheckboxDefaults.colors(),
 ) {
     Checkbox(
         checked = checked,
         onCheckedChange = onCheckedChange,
         enabled = enabled,
         modifier = modifier,
-        colors = colors
+        colors = colors,
     )
 }

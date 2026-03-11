@@ -50,18 +50,19 @@ fun MufasaSnackbarHost(
                         Text(
                             text = label.uppercase(),
                             style = MaterialTheme.typography.labelLarge,
-                            modifier = Modifier.clickable {
-                                snackbarData.performAction()
-                            }
+                            modifier =
+                                Modifier.clickable {
+                                    snackbarData.performAction()
+                                },
                         )
                     }
-                }
+                },
             ) {
                 Text(
                     text = snackbarData.visuals.message,
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyMedium,
                 )
             }
-        }
+        },
     )
 }

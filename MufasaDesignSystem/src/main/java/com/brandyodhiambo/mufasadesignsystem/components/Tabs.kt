@@ -42,15 +42,15 @@ fun MufasaPrimaryTabs(
         indicator = { tabPositions ->
             TabRowDefaults.PrimaryIndicator(
                 modifier = Modifier.tabIndicatorOffset(tabPositions[selectedTabIndex]),
-                color = indicatorColor
+                color = indicatorColor,
             )
-        }
+        },
     ) {
         tabs.forEachIndexed { index, title ->
             Tab(
                 selected = selectedTabIndex == index,
                 onClick = { onTabSelected(index) },
-                text = { Text(title) }
+                text = { Text(title) },
             )
         }
     }
@@ -73,15 +73,15 @@ fun MufasaSecondaryTabs(
         indicator = { tabPositions ->
             TabRowDefaults.SecondaryIndicator(
                 modifier = Modifier.tabIndicatorOffset(tabPositions[selectedTabIndex]),
-                color = indicatorColor
+                color = indicatorColor,
             )
-        }
+        },
     ) {
         tabs.forEachIndexed { index, title ->
             Tab(
                 selected = selectedTabIndex == index,
                 onClick = { onTabSelected(index) },
-                text = { Text(title) }
+                text = { Text(title) },
             )
         }
     }

@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CornerBasedShape
@@ -45,7 +44,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -59,7 +57,7 @@ fun MufasaOutlinedTextField(
     isError: Boolean = false,
     errorText: String? = null,
     singleLine: Boolean = true,
-    textStyle: TextStyle = LocalTextStyle. current,
+    textStyle: TextStyle = LocalTextStyle.current,
     label: (@Composable () -> Unit)? = null,
     title: @Composable (() -> Unit)? = null,
     leadingIcon: @Composable (() -> Unit)? = null,
@@ -67,15 +65,17 @@ fun MufasaOutlinedTextField(
     placeholder: @Composable (() -> Unit)? = null,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     shape: CornerBasedShape = MaterialTheme.shapes.small,
-    colors: TextFieldColors = TextFieldDefaults.colors(
-        focusedContainerColor = MaterialTheme.colorScheme.background,
-        unfocusedContainerColor = MaterialTheme.colorScheme.background,
-        errorContainerColor = MaterialTheme.colorScheme.background,
-        unfocusedIndicatorColor = MaterialTheme.colorScheme.onBackground.copy(
-            alpha = .5f,
+    colors: TextFieldColors =
+        TextFieldDefaults.colors(
+            focusedContainerColor = MaterialTheme.colorScheme.background,
+            unfocusedContainerColor = MaterialTheme.colorScheme.background,
+            errorContainerColor = MaterialTheme.colorScheme.background,
+            unfocusedIndicatorColor =
+                MaterialTheme.colorScheme.onBackground.copy(
+                    alpha = .5f,
+                ),
+            focusedIndicatorColor = MaterialTheme.colorScheme.primary,
         ),
-        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
-    ),
     visualTransformation: VisualTransformation = VisualTransformation.None,
 ) {
     Column(
@@ -85,8 +85,9 @@ fun MufasaOutlinedTextField(
             title()
         }
         OutlinedTextField(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier =
+                Modifier
+                    .fillMaxWidth(),
             value = value,
             onValueChange = onValueChange,
             label = label,
@@ -107,10 +108,11 @@ fun MufasaOutlinedTextField(
         if (errorText != null) {
             Text(
                 text = errorText,
-                style = MaterialTheme.typography.labelMedium.copy(
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.SemiBold
-                ),
+                style =
+                    MaterialTheme.typography.labelMedium.copy(
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.SemiBold,
+                    ),
                 color = MaterialTheme.colorScheme.error,
                 textAlign = TextAlign.End,
                 modifier = Modifier.fillMaxWidth(),
@@ -127,7 +129,7 @@ fun MufasaTextField(
     isError: Boolean = false,
     errorText: String? = null,
     singleLine: Boolean = true,
-    textStyle: TextStyle = LocalTextStyle. current,
+    textStyle: TextStyle = LocalTextStyle.current,
     label: (@Composable () -> Unit)? = null,
     title: @Composable (() -> Unit)? = null,
     leadingIcon: @Composable (() -> Unit)? = null,
@@ -135,15 +137,17 @@ fun MufasaTextField(
     placeholder: @Composable (() -> Unit)? = null,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     shape: CornerBasedShape = MaterialTheme.shapes.small,
-    colors: TextFieldColors = TextFieldDefaults.colors(
-        focusedContainerColor = MaterialTheme.colorScheme.surface,
-        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-        errorContainerColor = MaterialTheme.colorScheme.background,
-        unfocusedIndicatorColor = MaterialTheme.colorScheme.onBackground.copy(
-            alpha = .5f,
+    colors: TextFieldColors =
+        TextFieldDefaults.colors(
+            focusedContainerColor = MaterialTheme.colorScheme.surface,
+            unfocusedContainerColor = MaterialTheme.colorScheme.surface,
+            errorContainerColor = MaterialTheme.colorScheme.background,
+            unfocusedIndicatorColor =
+                MaterialTheme.colorScheme.onBackground.copy(
+                    alpha = .5f,
+                ),
+            focusedIndicatorColor = MaterialTheme.colorScheme.primary,
         ),
-        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
-    ),
     visualTransformation: VisualTransformation = VisualTransformation.None,
 ) {
     Column(
@@ -153,8 +157,9 @@ fun MufasaTextField(
             title()
         }
         TextField(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier =
+                Modifier
+                    .fillMaxWidth(),
             value = value,
             onValueChange = onValueChange,
             label = label,
@@ -173,10 +178,11 @@ fun MufasaTextField(
         if (errorText != null) {
             Text(
                 text = errorText,
-                style = MaterialTheme.typography.labelMedium.copy(
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.SemiBold
-                ),
+                style =
+                    MaterialTheme.typography.labelMedium.copy(
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.SemiBold,
+                    ),
                 color = MaterialTheme.colorScheme.error,
                 textAlign = TextAlign.End,
                 modifier = Modifier.fillMaxWidth(),
@@ -185,14 +191,13 @@ fun MufasaTextField(
     }
 }
 
-
 @Composable
 fun MufasaOtpTextField(
     modifier: Modifier = Modifier,
     otpText: String,
     otpCount: Int = 5,
     errorText: String? = null,
-    onOtpTextChange: (String, Boolean) -> Unit
+    onOtpTextChange: (String, Boolean) -> Unit,
 ) {
     LaunchedEffect(Unit) {
         if (otpText.length > otpCount) {
@@ -209,9 +214,10 @@ fun MufasaOtpTextField(
                     onOtpTextChange.invoke(it.text, it.text.length == otpCount)
                 }
             },
-            textStyle = LocalTextStyle. current.copy(
-                fontWeight = FontWeight.Bold
-            ),
+            textStyle =
+                LocalTextStyle.current.copy(
+                    fontWeight = FontWeight.Bold,
+                ),
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
             decorationBox = {
@@ -219,7 +225,7 @@ fun MufasaOtpTextField(
                     repeat(otpCount) { index ->
                         CharView(
                             index = index,
-                            text = otpText
+                            text = otpText,
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                     }
@@ -230,51 +236,55 @@ fun MufasaOtpTextField(
         if (errorText != null) {
             Text(
                 text = errorText,
-                style = MaterialTheme.typography.labelMedium.copy(
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.SemiBold
-                ),
+                style =
+                    MaterialTheme.typography.labelMedium.copy(
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.SemiBold,
+                    ),
                 color = MaterialTheme.colorScheme.error,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth(),
             )
         }
-
     }
 }
 
 @Composable
 private fun CharView(
     index: Int,
-    text: String
+    text: String,
 ) {
     val isFocused = text.length == index
-    val char = when {
-        index == text.length -> ""
-        index > text.length -> ""
-        else -> text[index].toString()
-    }
+    val char =
+        when {
+            index == text.length -> ""
+            index > text.length -> ""
+            else -> text[index].toString()
+        }
     Text(
-        modifier = Modifier
-            .width(40.dp)
-            .border(
-                1.dp, when {
-                    isFocused -> MaterialTheme.colorScheme.primary
-                    else -> MaterialTheme.colorScheme.onSurface
-                }, RoundedCornerShape(8.dp)
-            )
-            .padding(8.dp),
+        modifier =
+            Modifier
+                .width(40.dp)
+                .border(
+                    1.dp,
+                    when {
+                        isFocused -> MaterialTheme.colorScheme.primary
+                        else -> MaterialTheme.colorScheme.onSurface
+                    },
+                    RoundedCornerShape(8.dp),
+                ).padding(8.dp),
         text = char,
-        style = MaterialTheme.typography.bodyLarge.copy(
-            fontWeight = FontWeight.Bold,
-            fontSize = 20.sp
-        ),
-        color = if (isFocused) {
-            MaterialTheme.colorScheme.primary
-        } else {
-            MaterialTheme.colorScheme.onSurface
-        },
+        style =
+            MaterialTheme.typography.bodyLarge.copy(
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+            ),
+        color =
+            if (isFocused) {
+                MaterialTheme.colorScheme.primary
+            } else {
+                MaterialTheme.colorScheme.onSurface
+            },
         textAlign = TextAlign.Center,
-
-        )
+    )
 }

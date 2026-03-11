@@ -30,13 +30,13 @@ fun MufasaDisplayText(
     modifier: Modifier = Modifier,
     color: Color = MaterialTheme.colorScheme.onBackground,
     textAlign: TextAlign? = null,
-    style: TextStyle = LocalTextStyle.current
+    style: TextStyle = LocalTextStyle.current,
 ) {
     Text(
         text = text,
         modifier = modifier,
         style = style,
         color = color,
-        textAlign = textAlign
+        textAlign = textAlign,
     )
 }

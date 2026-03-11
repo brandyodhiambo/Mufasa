@@ -43,22 +43,24 @@ fun MufasaBanner(
     onAction: (() -> Unit)? = null,
     containerColor: Color = MaterialTheme.colorScheme.secondary,
     contentColor: Color = MaterialTheme.colorScheme.onSecondary,
-    shape: Shape = MaterialTheme.shapes.medium
+    shape: Shape = MaterialTheme.shapes.medium,
 ) {
     Surface(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(8.dp),
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .padding(8.dp),
         color = containerColor,
         contentColor = contentColor,
         shape = shape,
-        shadowElevation = 2.dp
+        shadowElevation = 2.dp,
     ) {
         Row(
-            modifier = Modifier
-                .padding(16.dp)
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.Top
+            modifier =
+                Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth(),
+            verticalAlignment = Alignment.Top,
         ) {
             if (icon != null) {
                 icon()

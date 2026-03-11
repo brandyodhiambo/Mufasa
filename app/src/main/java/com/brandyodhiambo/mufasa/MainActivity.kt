@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
             AppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
                     ) { }
                 }
             }
@@ -44,11 +44,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
 @Preview(showBackground = true)
 @Composable
 fun AppPreview() {
     AppTheme {
-
     }
 }

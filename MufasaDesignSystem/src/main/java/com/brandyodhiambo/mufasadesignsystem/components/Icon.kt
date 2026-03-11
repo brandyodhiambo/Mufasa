@@ -44,10 +44,11 @@ fun MufasaIcon(
         border = border,
     ) {
         Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(4.dp),
-            contentAlignment = Alignment.Center
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .padding(4.dp),
+            contentAlignment = Alignment.Center,
         ) {
             content()
         }
